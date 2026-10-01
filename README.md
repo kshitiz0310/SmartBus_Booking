@@ -1,108 +1,97 @@
-# 🚌 Smart Bus Booking System
+🚌 Smart Bus Booking
+Next-Gen Bus Reservation & Transport Fleet Management
 
-An ultra-modern, full-stack **MERN (MongoDB, Express.js, React 18, Node.js)** Bus Reservation & Transport Fleet Management Web Application. Built with sleek glassmorphic UI aesthetics, real-time interactive seat maps, flexible multi-payment gateways, and role-based administration.
-
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://smart-bus-booking-belg-jiux9wss1.vercel.app/)
-[![React](https://img.shields.io/badge/React_18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
-[![MongoDB Atlas](https://img.shields.io/badge/MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/atlas)
-[![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+Search routes, select seats on real-time interactive maps, book tickets instantly with multi-payment options, and manage fleet operations in real-time.
 
 ---
 
-## 🌟 Live Demo & Preview
+📌 About The Project
 
-* 🌐 **Live Website**: [https://smart-bus-booking-belg-jiux9wss1.vercel.app/](https://smart-bus-booking-belg-jiux9wss1.vercel.app/)
+Smart Bus Booking is a full-stack MERN application that simplifies campus, exam, and inter-city bus travel. It provides passengers with real-time seat availability maps, instant digital ticket confirmations, and flexible checkout options (Instant Demo, Razorpay Gateway, and Manual UPI UTR). It also equips transport managers with a Super Admin dashboard for fleet scheduling, booking verification, user management, and report exports.
 
----
-
-## ✨ Key Features
-
-### 👤 Passenger Portal & Booking Engine
-* 🔍 **Smart Route Search**: Instant search by Origin, Destination, Travel Date, and AC / Non-AC Sleeper filters.
-* ⚡ **Quick Selection Chips**: One-click popular route pre-fills (e.g. `GLA → MZP`, `Delhi → Manali`, `Mumbai → Goa`).
-* 🎟️ **Interactive 40-Seat Layout**: Real-time visual seat selection map displaying Available, Selected, and Booked seats.
-* 💳 **Multi-Payment Modes**:
-  * **Instant Demo Checkout**: 1-Click test payment for friction-free evaluation without requiring external keys.
-  * **Razorpay Online Gateway**: Card, NetBanking, and UPI integration using Razorpay SDK.
-  * **UPI QR / Manual UTR**: Enter transaction reference numbers for manual admin verification.
-* 🎫 **Digital Ticket Passes**: View detailed ticket receipts with departure times, seat numbers, price breakdown, and status badges.
-
-### 🛡️ Super Admin Control Center
-* 📊 **Real-Time Analytics Dashboard**: Live metric counters for Total Buses, Total Passenger Reservations, Registered Users, and Estimated Revenue.
-* 🚌 **Fleet Operations Manager**: Add new buses to fleet, schedule departure/arrival times, set fares, driver contact details, and seat capacities.
-* 📋 **Booking Verification**: Monitor passenger reservations, approve/reject pending UTR payments, or process cancellations.
-* 👥 **User Account Management**: Directory of registered accounts with inline role editing (`user` ↔ `admin`).
-* 📥 **CSV Data Export**: Export booking and financial reports directly to CSV.
+Because booking a bus ticket should be as simple as a single tap! 🚌✨
 
 ---
 
-## 🛠️ Tech Stack Architecture
+✨ Features
 
-### Frontend
-| Component | Technology |
-| :--- | :--- |
-| **Framework** | React 18 (Create React App) |
-| **Routing** | React Router DOM v6 |
-| **Styling** | Dark Glassmorphic Custom CSS, Material UI (`@mui/material`) |
-| **Icons & Animations** | `lucide-react`, `lottie-react`, AOS (Animate On Scroll) |
-| **HTTP Client** | Axios (with bearer token interceptors) |
-
-### Backend & Infrastructure
-| Component | Technology |
-| :--- | :--- |
-| **Runtime** | Node.js (ES Modules syntax) |
-| **Framework** | Express.js |
-| **Database** | MongoDB Atlas (Mongoose ORM) |
-| **Authentication** | JSON Web Tokens (JWT) & `bcryptjs` password hashing |
-| **Payment SDK** | Razorpay SDK & `crypto` HMAC verification |
-| **Deployment** | Vercel (Serverless Functions) |
+🚌 Interactive Seat Selection — Real-time 40-seat map layout displaying available, selected, and booked seats
+💳 Multi-Payment Checkout — Instant Demo Mode (1-click test checkout), Razorpay Gateway, and UPI UTR verification
+🎫 Digital Ticket Passes — Detailed ticket receipts with seat numbers, route details, and status badges
+🛡️ Super Admin Control Suite — Real-time metrics dashboard for buses, reservations, revenue, and users
+📋 Fleet Operations Scheduler — Add buses, update departure times, assign drivers, and manage route fares
+👥 User Account Directory — Manage registered accounts with inline role editing (user ↔ admin)
+🔒 Secure Authentication — Protected JWT routes and session persistence
 
 ---
 
-## 📂 Project Structure
+🛠️ Tech Stack
+
+Frontend: React 18 ⚡, React Router v6, Material UI, Lucide Icons, AOS
+Backend: Express.js, Node.js (ES Modules), JWT, Multer
+Database: Atlas Cloud ☁️ (MongoDB Mongoose)
+Payments: Razorpay SDK & Instant Demo Gateway
+
+---
+
+🚀 Live Demo
+
+🔗 [Click here to try Smart Bus Booking](https://smart-bus-booking.vercel.app/)
+
+---
+
+⚙️ Getting Started (Local Setup)
 
 ```bash
-SmartBus_Booking/
-├── backend/
-│   ├── config/
-│   │   └── db.js            # MongoDB Atlas Mongoose connection
-│   ├── Middleware/
-│   │   └── authMiddleware.js # JWT protection & admin authority middleware
-│   ├── Models/
-│   │   ├── User.js          # User schema & role enum (user, admin)
-│   │   ├── Bus.js           # Bus route, fare & booked seats schema
-│   │   └── Booking.js       # Passenger reservation schema
-│   ├── routes/
-│   │   ├── auth.js          # Registration, Login & /me endpoints
-│   │   ├── busRoutes.js     # Bus search & admin CRUD routes
-│   │   ├── bookingRoutes.js # Seat booking, cancellation & verification
-│   │   ├── userRoutes.js    # User management & role updates
-│   │   └── paymentRoutes.js # Razorpay order creation & signature verification
-│   ├── server.js            # Express server entry point
-│   └── vercel.json          # Vercel serverless build configuration
-│
-└── frontend/
-    ├── public/              # HTML template & assets
-    └── src/
-        ├── api.jsx          # Axios instance with API URL fallback
-        ├── App.jsx          # React Router setup & dynamic navbar selector
-        ├── components/
-        │   ├── NavbarLanding.jsx
-        │   ├── NavbarUser.jsx
-        │   └── NavbarAdmin.jsx
-        └── pages/
-            ├── HomePage.jsx       # Public landing page showcase
-            ├── Login.jsx          # User & Admin authentication login
-            ├── Register.jsx       # User registration screen
-            ├── UserDashboard.jsx  # Route search & bus list
-            ├── BookBus.jsx        # Seat map & multi-payment checkout
-            ├── MyBookings.jsx     # Passenger ticket receipts
-            ├── Profile.jsx        # User profile management
-            ├── AdminDashboard.jsx # Admin metric overview & control modules
-            ├── ManageBuses.jsx    # Fleet bus scheduler
-            ├── ManageBookings.jsx # Reservation approval manager
-            └── ManageUsers.jsx    # User role management table
+# Clone the repo
+git clone https://github.com/kshitiz0310/SmartBus_Booking.git
 
+# Go into the project folder
+cd SmartBus_Booking
 
-Made with ❤️ by Kshitiz Tiwari
+# Install dependencies (frontend)
+cd frontend
+npm install
+
+# Install dependencies (backend)
+cd ../backend
+npm install
+
+# Run backend
+npm run dev
+
+# Run frontend (in a new terminal)
+cd ../frontend
+npm start
+```
+
+Create a `.env` file in the `backend` folder with:
+```env
+PORT=5000
+MONGO_URI=your_mongodb_atlas_uri
+JWT_SECRET=your_secret_key
+RZP_KEY=your_razorpay_key_id
+RZP_SECRET=your_razorpay_secret_key
+```
+
+---
+
+🧑💻 Author
+
+Kshitiz Tiwari
+* GitHub: [@kshitiz0310](https://github.com/kshitiz0310)
+* LinkedIn: [kshitiz-tiwari](https://www.linkedin.com/in/kshitiz-tiwari-47610332b/)
+* LeetCode: [kingkshitiz05](https://leetcode.com/u/kingkshitiz05/)
+
+---
+
+⭐ Show Some Love
+
+If you found this project useful, consider giving it a ⭐ — it really helps!
+
+---
+
+📄 License
+
+This project is licensed under the MIT License.
+Made with 💻 & ☕ by Kshitiz
