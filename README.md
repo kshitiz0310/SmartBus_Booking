@@ -13,7 +13,6 @@ An ultra-modern, full-stack **MERN (MongoDB, Express.js, React 18, Node.js)** Bu
 ## 🌟 Live Demo & Preview
 
 * 🌐 **Live Website**: [https://smart-bus-booking-belg-jiux9wss1.vercel.app/](https://smart-bus-booking-belg-jiux9wss1.vercel.app/)
-* ⚡ **Backend API**: `https://smart-bus-booking.vercel.app/api`
 
 ---
 
@@ -104,3 +103,6 @@ SmartBus_Booking/
             ├── ManageBuses.jsx    # Fleet bus scheduler
             ├── ManageBookings.jsx # Reservation approval manager
             └── ManageUsers.jsx    # User role management table
+
+
+Made with ❤️ by Kshitiz Tiwari
