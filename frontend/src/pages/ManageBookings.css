@@ -1,0 +1,132 @@
+/* Full Screen Width Dark Wrapper */
+.manage-bookings-wrapper {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  background-color: #0b0f17;
+  color: #f8fafc;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  padding: 2.5rem 2rem 4rem;
+  box-sizing: border-box;
+}
+
+.manage-bookings-content {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.amber-badge {
+  background: rgba(245, 158, 11, 0.12) !important;
+  border-color: rgba(245, 158, 11, 0.3) !important;
+  color: #fbbf24 !important;
+}
+
+.seat-cell {
+  font-weight: 700;
+  color: #60a5fa !important;
+}
+
+.amount-cell {
+  font-weight: 800;
+  color: #4ade80 !important;
+}
+
+.utr-cell {
+  font-family: monospace;
+  font-size: 0.82rem !important;
+  color: #94a3b8 !important;
+}
+
+.receipt-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #60a5fa;
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+
+.receipt-link:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+.link-ic {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.no-receipt {
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+/* Status Pills */
+.status-pill {
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.status-pill.pending {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.status-pill.verified {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.status-pill.rejected {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.verify-btn {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.verify-btn:hover {
+  background: #22c55e;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+}
+
+.reject-btn {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.reject-btn:hover {
+  background: #f59e0b;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+.cancel-btn {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.cancel-btn:hover {
+  background: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .manage-bookings-wrapper {
+    padding: 1.5rem 1rem;
+  }
+}

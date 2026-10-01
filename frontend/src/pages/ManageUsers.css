@@ -1,0 +1,155 @@
+/* Full Screen Width Dark Wrapper */
+.manage-users-wrapper {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  background-color: #0b0f17;
+  color: #f8fafc;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  padding: 2.5rem 2rem 4rem;
+  box-sizing: border-box;
+}
+
+.manage-users-content {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* Header */
+.purple-badge {
+  background: rgba(168, 85, 247, 0.12) !important;
+  border-color: rgba(168, 85, 247, 0.3) !important;
+  color: #c084fc !important;
+}
+
+.th-icon {
+  width: 0.85rem;
+  height: 0.85rem;
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}
+
+/* User ID and Cells */
+.user-id-cell {
+  font-family: monospace;
+  font-size: 0.82rem !important;
+  color: #94a3b8 !important;
+}
+
+.user-name-cell {
+  font-weight: 700;
+  color: #ffffff !important;
+}
+
+.user-email-cell {
+  color: #cbd5e1 !important;
+}
+
+/* Role Badges */
+.role-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.role-admin {
+  background: rgba(236, 72, 153, 0.15);
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+.role-user {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.role-select {
+  padding: 0.4rem 0.8rem;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid #3b82f6;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+/* Button Group */
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-ic {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.edit-btn {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.edit-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.delete-btn {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.delete-btn:hover {
+  background: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+.save-btn {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.save-btn:hover {
+  background: #22c55e;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+}
+
+.cancel-btn {
+  background: rgba(148, 163, 184, 0.15);
+  color: #cbd5e1;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.cancel-btn:hover {
+  background: #64748b;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .manage-users-wrapper {
+    padding: 1.5rem 1rem;
+  }
+}
