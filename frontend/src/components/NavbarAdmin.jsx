@@ -17,9 +17,7 @@ export default function NavbarAdmin() {
               <div className="logo-glow-ring-admin"></div>
             </div>
             <div className="navbar-admin-brand-text">
-              <span className="brand-title">
-                SmartBus<span className="title-accent-admin">Booking</span>
-              </span>
+              <span className="brand-title">Smart Bus</span>
               <span className="brand-subtitle">
                 <ShieldCheck className="shield-icon" /> Admin Suite
               </span>

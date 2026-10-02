@@ -17,9 +17,7 @@ export default function NavbarUser() {
               <div className="logo-glow-ring"></div>
             </div>
             <div className="navbar-user-brand-text">
-              <span className="brand-title">
-                SmartBus<span className="title-accent">Booking</span>
-              </span>
+              <span className="brand-title">Smart Bus</span>
               <span className="brand-subtitle">
                 <Sparkles className="sub-sparkle" /> Passenger Portal
               </span>

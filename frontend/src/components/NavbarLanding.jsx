@@ -14,9 +14,7 @@ export default function NavbarLanding() {
               <div className="logo-glow-ring"></div>
             </div>
             <div className="navbar-brand-text-group">
-              <span className="navbar-landing-title">
-                SmartBus<span className="title-accent">Booking</span>
-              </span>
+              <span className="navbar-landing-title">Smart Bus</span>
               <span className="navbar-brand-tag">
                 <Sparkles className="tag-sparkle" /> Express Fleet
               </span>
